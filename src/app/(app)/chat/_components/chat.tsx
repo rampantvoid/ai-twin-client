@@ -11,7 +11,7 @@ export const Chat = () => {
     scrollRef.current?.scrollIntoView({
       behavior: "smooth",
     });
-  }, [messages]);
+  }, [messages, scrollRef]);
 
   return (
     <div className="flex-1 px-24 min-h-[650px] max-h-[650px] relative overflow-x-hidden">
