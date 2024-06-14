@@ -2,9 +2,9 @@ import { StepProp } from "./props";
 
 export const Points = (props: StepProp) => {
   return (
-    <div className="flex-1 flex flex-col items-center justify-between px-32 pb-24">
-      <div className="flex-1 flex items-center justify-between w-full">
-        <div>
+    <div className="flex-1 flex flex-col items-center justify-between px-32 pb-24 ">
+      <div className="flex-1 flex items-center gap-8 justify-between w-full">
+        <div className="flex flex-col ">
           <svg
             id="noun-behavioral-health-5085126"
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ export const Points = (props: StepProp) => {
             <li>Social Interactions</li>
           </ul>
         </div>
-        <div>
+        <div className="flex flex-col">
           <svg
             id="noun-emotional-6152612"
             xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ export const Points = (props: StepProp) => {
             <li>learning and Adaption</li>
           </ul>
         </div>
-        <div>
+        <div className="flex flex-col">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="88.558"

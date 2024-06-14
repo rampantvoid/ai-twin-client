@@ -56,7 +56,7 @@ const Page = () => {
 
         {!shouldShowComponent && <Chat />}
 
-        <div className="flex px-24 flex-col">
+        <div className="flex 2xl:px-24 px-4 flex-col">
           {!shouldShowComponent && <Switch />}
           {!shouldShowComponent && <Input />}
 

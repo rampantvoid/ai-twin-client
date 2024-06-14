@@ -10,7 +10,7 @@ const Sidebar = () => {
   return (
     <div className="h-dvh bg-white flex flex-col w-64 justify-between py-4">
       <div className="pl-6 flex flex-col gap-6">
-        <Image src="/assets/navbar-logo.png" alt="" className="w-28" />
+        <img src="/assets/navbar-logo.png" alt="" className="w-28" />
         <div className="flex flex-col gap-16">
           <div className="p-3 font-bold text-lg">My Twins</div>
           <div className="flex flex-col gap-4">
@@ -32,7 +32,7 @@ const Sidebar = () => {
                   : ""
               }`}
             >
-              New
+              Personalized Assistant
             </Link>
           </div>
         </div>
@@ -44,11 +44,11 @@ const Sidebar = () => {
 
         <div className="flex flex-col gap-4">
           <Link href="" className="flex gap-2 items-center">
-            <Image src="/assets/settings-icon.png" alt="" />
+            <img src="/assets/settings-icon.png" alt="" />
             Settings
           </Link>
           <Link href="" className="flex gap-2 items-center">
-            <Image src="/assets/subs-icon.png" alt="" />
+            <img src="/assets/subs-icon.png" alt="" />
             Subscription
           </Link>
         </div>

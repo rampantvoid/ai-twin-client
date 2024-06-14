@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -11,7 +10,7 @@ const Navbar = () => {
         }
       </style>
       <div className="flex w-full items-center">
-        <Image src="/assets/navbar-logo.png" alt="" className="w-28" />
+        <img src="/assets/navbar-logo.png" alt="" className="w-28" />
 
         <div className="flex items-center justify-between w-full ml-64 mr-10">
           <div className="flex items-center gap-10 text-subtext">

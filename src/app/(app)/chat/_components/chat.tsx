@@ -14,7 +14,7 @@ export const Chat = () => {
   }, [messages, scrollRef]);
 
   return (
-    <div className="flex-1 px-24 min-h-[650px] max-h-[650px] relative overflow-x-hidden">
+    <div className="flex-1 2xl:px-24 2xl:min-h-[650px] 2xl:max-h-[650px] relative overflow-x-hidden">
       <div className="absolute w-full bottom-0 h-16 z-10 bg-gradient-to-b from-transparent to-[#F8F8F8] opacity-80"></div>
       <div className="absolute w-full top-0 h-16 z-10 bg-gradient-to-t from-transparent to-[#F8F8F8] opacity-80"></div>
 

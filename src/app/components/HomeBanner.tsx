@@ -4,7 +4,7 @@ import React from "react";
 const HomeBanner = () => {
   return (
     <div className="w-full flex justify-center items-center my-36 gap-20">
-      <Image src="/assets/home-banner-icon.svg" alt="" />
+      <img src="/assets/home-banner-icon.svg" alt="" />
       <div className="text-4xl flex flex-col">
         {" "}
         <span>Helping you build your</span>{" "}
