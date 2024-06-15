@@ -3,7 +3,7 @@ import { source } from "@/utils/fonts";
 export const Navbar = () => {
   const links = ["Configure", "Customize", "Integration", "Setup", "Usage"];
   return (
-    <div className="w-full flex relative items-center justify-center gap-16">
+    <div className="w-full flex relative items-center pl-20 2xl:pl-52 gap-16">
       {links.map((l) => (
         <p
           key={l}

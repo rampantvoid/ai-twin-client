@@ -97,7 +97,7 @@ export function Input() {
 
   return (
     <form
-      className="w-full bg-[#E8E8E8] rounded-[40px] p-8 flex items-center justify-between"
+      className="w-full bg-[#E8E8E8] rounded-[40px] p-6 flex items-center justify-between"
       onSubmit={onSubmit}
     >
       <input
@@ -108,7 +108,7 @@ export function Input() {
         disabled={loading}
       />
 
-      <div className="flex gap-4 items-center">
+      <div className="flex gap-4 items-center pr-6 pl-1">
         <Image
           src="/file.svg"
           height={20}

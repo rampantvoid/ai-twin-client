@@ -22,7 +22,7 @@ const Sidebar = () => {
                   : ""
               }`}
             >
-              Chat
+              My Twin
             </Link>
             <Link
               href="/new"

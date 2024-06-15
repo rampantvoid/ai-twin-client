@@ -35,7 +35,7 @@ const Page = () => {
   }, [field, step]);
 
   return (
-    <div className="w-full h-full flex flex-1 mt-16 overflow-y-auto">
+    <div className="w-full h-full flex mt-16 overflow-y-auto">
       <div className="w-[70%] flex flex-col justify-between">
         <Header />
 

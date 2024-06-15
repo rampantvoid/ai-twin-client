@@ -5,7 +5,7 @@ export const State3 = (props: StepProp) => {
     <div className="flex-1 flex flex-col items-start px-4 py-5">
       <h1 className="text-3xl">I would like to answer questions</h1>
 
-      <div className="flex-1 flex items-center justify-center w-full flex-col gap-8 px-24">
+      <div className="flex-1 flex items-center justify-center w-full flex-col gap-8 2xl:px-24">
         <h2 className="text-4xl">What are your hobbies or interests?</h2>
 
         <div className="flex gap-4 items-center justify-center flex-wrap px-24">

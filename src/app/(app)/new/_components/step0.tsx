@@ -34,6 +34,7 @@ export const Step0 = (props: StepProp) => {
                 setField(field);
                 router.push("/chat");
               }
+              setField(field);
               router.push("/chat");
               // props.handleNext();
             }}

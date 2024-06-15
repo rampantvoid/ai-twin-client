@@ -2,9 +2,9 @@ import { StepProp } from "./props";
 
 export const Points = (props: StepProp) => {
   return (
-    <div className="flex-1 flex flex-col items-center justify-between px-32 pb-24 ">
-      <div className="flex-1 flex items-center gap-8 justify-between w-full">
-        <div className="flex flex-col ">
+    <div className="flex-1 flex flex-col items-center justify-between 2xl:px-32 2xl:pb-24 px-4">
+      <div className="flex-1 flex items-center justify-between w-full">
+        <div className="flex flex-col items-center">
           <svg
             id="noun-behavioral-health-5085126"
             xmlns="http://www.w3.org/2000/svg"
@@ -31,13 +31,13 @@ export const Points = (props: StepProp) => {
             Attributes
           </h3>
 
-          <ul className="text-sm text-gray-600">
+          <ul className="text-sm text-gray-600 text-center">
             <li>Activity Patterns</li>
             <li>Consumption Habits</li>
             <li>Social Interactions</li>
           </ul>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center">
           <svg
             id="noun-emotional-6152612"
             xmlns="http://www.w3.org/2000/svg"
@@ -77,19 +77,19 @@ export const Points = (props: StepProp) => {
             />
           </svg>
 
-          <h3 className="text-2xl font-bold mb-3 mt-12">
+          <h3 className="text-2xl font-bold mb-3 mt-12 text-center">
             Cognitive and
             <br />
             Emotional Attributes
           </h3>
 
-          <ul className="text-sm text-gray-600">
+          <ul className="text-sm text-gray-600 text-center">
             <li>Decision-Making Patterns,</li>
             <li>Emotional responses,</li>
             <li>learning and Adaption</li>
           </ul>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="88.558"
@@ -114,7 +114,7 @@ export const Points = (props: StepProp) => {
 
           <h3 className="text-2xl font-bold mb-3 mt-12">Historical Data</h3>
 
-          <ul className="text-sm text-gray-600">
+          <ul className="text-sm text-gray-600 text-center">
             <li>Medical History</li>
             <li>Personal History</li>
             <li>Transactional History</li>
