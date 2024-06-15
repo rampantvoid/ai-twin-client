@@ -27,7 +27,7 @@ const Sidebar = () => {
             <Link
               href="/new"
               className={`p-3 ${
-                pathname === "/new"
+                pathname.includes("/new")
                   ? "bg-[#F7F7F7] text-[#F324EA] rounded-l-xl"
                   : ""
               }`}
