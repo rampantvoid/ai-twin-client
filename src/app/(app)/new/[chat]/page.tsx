@@ -38,8 +38,8 @@ const Page = () => {
   }, [field, step]);
 
   return (
-    <div className="w-full h-full flex mt-16 overflow-y-auto">
-      <div className="w-[70%] flex flex-col justify-between">
+    <div className="w-full h-full flex px-1 py-3">
+      <div className="flex-1 flex flex-col justify-between">
         <Header />
 
         {step === 0 && shouldShowComponent && (
@@ -58,14 +58,13 @@ const Page = () => {
         )}
 
         {!shouldShowComponent && <Chat />}
-
-        <div className="flex 2xl:px-24 px-4 flex-col">
+        <div className="flex 2xl:px-24 flex-col">
           {!shouldShowComponent && <Switch />}
           {!shouldShowComponent && <Input />}
 
           {!shouldShowComponent && (
             <p
-              className={`text-[#B9B9B9] ${source.className} text-center mt-4`}
+              className={`text-[#B9B9B9] ${source.className} text-center text-sm mt-4`}
             >
               Please write accurate else it can do mistakes. Check important
               info.

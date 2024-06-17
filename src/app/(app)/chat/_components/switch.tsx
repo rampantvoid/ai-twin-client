@@ -3,7 +3,7 @@ import { useState } from "react";
 export const Switch = () => {
   const [selected, setSelected] = useState(0);
   return (
-    <div className="flex justify-between items-center relative max-w-max border rounded-[17px] text-xs mb-3 ml-10 h-7">
+    <div className="flex justify-between items-center relative max-w-max border rounded-[17px] text-xs mb-3 ml-10 h-7 py-1">
       <p
         className={`${
           selected === 0 ? "text-white" : "text-[#999999]"

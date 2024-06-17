@@ -13,13 +13,13 @@ import { IconType } from "react-icons";
 
 const State2 = (props: StepProp) => {
   return (
-    <div className="flex-1 flex flex-col items-start px-12 pt-10">
+    <div className="h-full flex flex-col items-start 2xl:px-12 2x:pt-10 px-4 overflow-y-scroll">
       <div className="flex items-center justify-center gap-5">
-        <Image src="/web.svg" width={50} height={50} alt="web" />
+        <Image src="/web.svg" width={45} height={45} alt="web" />
         <p>Train with web link</p>
       </div>
 
-      <div className="grid mt-16 grid-cols-3 gap-12 w-full px-24">
+      <div className="grid mt-10 grid-cols-3 gap-12 w-full 2xl:px-24">
         {[
           RiTwitterXLine,
           RiYoutubeFill,
@@ -34,7 +34,7 @@ const State2 = (props: StepProp) => {
         })}
       </div>
 
-      <div className="flex items-center justify-center gap-3 mt-28">
+      <div className="flex items-center justify-center gap-3 2xl:mt-28 mt-8">
         <div className="flex items-center justify-center relative">
           <input
             type="checkbox"
@@ -96,7 +96,7 @@ function Field({ C }: { C: IconType }) {
           type="checkbox"
           name=""
           id=""
-          className={`peer appearance-none h-8 w-8 flex items-center justify-center border-[3px] rounded-[10px] border-gray-400 checked:bg-green-400 checked:border-black focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100`}
+          className={`peer appearance-none h-6 w-6 flex items-center justify-center border-[3px] rounded-[10px] border-gray-400 checked:bg-green-400 checked:border-black focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100`}
           onChange={(e) => setChecked(e.target.checked)}
         />
         <svg
@@ -137,7 +137,7 @@ peer-checked:hidden pointer-events-none`}
           checked && "bg-green-400"
         }`}
       >
-        <C fill="white" className="w-10 h-10" />
+        <C fill="white" className="w-6 h-6" />
       </div>
     </div>
   );

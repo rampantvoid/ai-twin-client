@@ -97,7 +97,7 @@ export function Input() {
 
   return (
     <form
-      className="w-full bg-[#E8E8E8] rounded-[40px] p-6 flex items-center justify-between"
+      className=" w-full bg-[#E8E8E8] rounded-[40px] p-4 flex items-center justify-between"
       onSubmit={onSubmit}
     >
       <input
