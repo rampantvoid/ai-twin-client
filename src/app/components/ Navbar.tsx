@@ -10,7 +10,9 @@ const Navbar = () => {
         }
       </style>
       <div className="flex w-full items-center">
-        <img src="/assets/navbar-logo.png" alt="" className="w-28" />
+        <Link href="/">
+          <img src="/assets/navbar-logo.png" alt="" className="w-28" />
+        </Link>
 
         <div className="flex items-center justify-between w-full ml-64 mr-10">
           <div className="flex items-center gap-10 text-subtext">

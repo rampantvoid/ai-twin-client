@@ -10,7 +10,9 @@ const Sidebar = () => {
   return (
     <div className="h-dvh bg-white flex flex-col w-64 justify-between py-4">
       <div className="pl-6 flex flex-col gap-6">
-        <img src="/assets/navbar-logo.png" alt="" className="w-28" />
+        <Link href="/">
+          <img src="/assets/navbar-logo.png" alt="" className="w-28" />
+        </Link>
         <div className="flex flex-col gap-16">
           <div className="p-3 font-bold text-lg">My Twins</div>
           <div className="flex flex-col gap-4">
