@@ -30,7 +30,7 @@ const Page = () => {
   }, [step]);
 
   return (
-    <div className="w-full h-full flex flex-1 mt-16">
+    <div className="w-full h-full flex flex-1 2xl:mt-16">
       <form
         className="w-[70%] flex flex-col justify-between"
         onSubmit={onSubmit}

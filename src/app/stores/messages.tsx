@@ -5,13 +5,25 @@ type Message = {
   message: string;
 };
 
+type Messages = Record<string, Message[]>;
+
 type Store = {
-  messages: Message[];
-  addMessage: (message: Message) => void;
+  messages: Messages;
+  addMessage: (key: string, message: Message) => void;
 };
 
 export const useMessages = create<Store>()((set) => ({
-  messages: [],
-  addMessage: (message) =>
-    set(({ messages }) => ({ messages: [...messages, message] })),
+  messages: {
+    root: [],
+  },
+  addMessage: (key, newMessage) => {
+    set(({ messages }) => {
+      return {
+        messages: {
+          ...messages,
+          [key]: [...(messages[key] || []), newMessage],
+        },
+      };
+    });
+  },
 }));

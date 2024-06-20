@@ -14,15 +14,15 @@ export const Chat = () => {
   }, [messages, scrollRef]);
 
   return (
-    <div className=" 2xl:px-24 overflow-x-hidden px-2 h-[400px] 2xl:h-[600px]">
-      <div className="flex items-start flex-col  px-1">
-        {messages.map((m, i) => (
+    <div className=" 2xl:px-24 overflow-x-hidden px-2 h-[350px] 2xl:h-[600px]">
+      <div className="flex items-start flex-col px-1">
+        {messages["root"].map((m, i) => (
           <div
-            className={`p-3 rounded-xl ${
+            className={`p-3 rounded-xl max-w-[500px] ${
               m.author === "gemini"
                 ? "self-start bg-gray-200"
                 : "self-end bg-gray-200"
-            } ${i === messages.length - 1 ? "mb-0" : "mb-8"}`}
+            } ${i === messages["root"].length - 1 ? "mb-0" : "mb-8"}`}
             key={i}
           >
             <Markdown className="prose">{m.message}</Markdown>

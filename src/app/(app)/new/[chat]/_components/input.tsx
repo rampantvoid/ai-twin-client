@@ -3,9 +3,8 @@
 import { useField } from "@/app/stores/field";
 import { useMessages } from "@/app/stores/messages";
 import { getResponse, getSummary } from "@/utils/api";
-import axios from "axios";
 import Image from "next/image";
-import { createRef, FormEvent, useState } from "react";
+import { createRef, FormEvent, useEffect, useState } from "react";
 
 export function Input() {
   const textRef = createRef<HTMLInputElement>();
@@ -24,7 +23,7 @@ export function Input() {
     if (file) {
       setLoading(true);
 
-      addMessage({
+      addMessage(field || "root", {
         author: "me",
         message: `Summarize ${file.name}`,
       });
@@ -45,9 +44,11 @@ export function Input() {
       }
 
       getSummary(file, endpoint)
-        .then((summary) => addMessage({ author: "gemini", message: summary }))
+        .then((summary) =>
+          addMessage(field || "root", { author: "gemini", message: summary })
+        )
         .catch(() =>
-          addMessage({
+          addMessage(field || "root", {
             author: "gemini",
             message: "Gemini couldnt respond to this message.",
           })
@@ -67,20 +68,20 @@ export function Input() {
     const val = textRef.current.value;
     textRef.current.value = "";
 
-    addMessage({
+    addMessage(field || "root", {
       author: "me",
       message: val,
     });
 
     getResponse(field, val)
       .then((text) => {
-        addMessage({
+        addMessage(field || "root", {
           author: "gemini",
           message: text,
         });
       })
       .catch(() => {
-        addMessage({
+        addMessage(field || "root", {
           author: "gemini",
           message: "Gemini couldnt respond to this message.",
         });
@@ -95,15 +96,26 @@ export function Input() {
     fileRef.current?.click();
   };
 
+  const formRef = createRef<HTMLFormElement>();
+
+  useEffect(() => {
+    if (file && !loading) {
+      formRef.current?.dispatchEvent(
+        new Event("submit", { cancelable: true, bubbles: true })
+      );
+    }
+  }, [file]);
+
   return (
     <form
+      ref={formRef}
       className=" w-full bg-[#E8E8E8] rounded-[40px] p-4 flex items-center justify-between"
       onSubmit={onSubmit}
     >
       <input
         type="text"
-        className="placeholder:text-[#626262] w-full bg-transparent outline-none border-none"
-        placeholder="Train your twin"
+        className="placeholder:text-[#626262] w-full bg-transparent outline-none border-none disabled:cursor-not-allowed"
+        placeholder={!loading ? "Train your twin" : "Generating Response..."}
         ref={textRef}
         disabled={loading}
       />
@@ -151,6 +163,10 @@ export function Input() {
             const files = e.target.files;
             if (!files?.length) return;
             const file = files[0];
+
+            if (fileRef.current) {
+              fileRef.current.value = "";
+            }
 
             setFile(file);
           }}

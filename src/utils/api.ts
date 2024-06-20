@@ -2,9 +2,7 @@ import axios from "axios";
 
 export const getResponse = async (field: string | null, text: string) => {
   const res = await axios.post<{ response: string }>(
-    `https://fuzzy-couscous-vr5w7wxq6gjfw4jx-5000.app.github.dev/${
-      field || "text"
-    }`,
+    `http://3.111.245.115:5000/${field || "text"}`,
     field === "health"
       ? {
           text,
@@ -21,7 +19,7 @@ export const getSummary = async (file: File, endpoint: string) => {
   formData.set("file", file);
 
   const res = await axios.post<{ response: string }>(
-    `https://fuzzy-couscous-vr5w7wxq6gjfw4jx-5000.app.github.dev/${endpoint}`,
+    `http://3.111.245.115:5000/${endpoint}`,
     formData,
     {
       headers: {

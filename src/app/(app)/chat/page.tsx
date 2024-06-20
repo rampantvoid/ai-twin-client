@@ -11,11 +11,9 @@ import { State1 } from "./_components/state1";
 import State2 from "./_components/state2";
 import { State3 } from "./_components/state3";
 import { Chat } from "./_components/chat";
-import { useField } from "@/app/stores/field";
 
 const Page = () => {
   const [step, setStep] = useState(0);
-  const [isSetupDone, setIsSetupDone] = useState(false);
 
   useEffect(() => {
     if (sessionStorage.getItem("isSetupDone") === "true") {
@@ -37,7 +35,6 @@ const Page = () => {
     }
   }, [step]);
 
-  const field = useField((store) => store.field);
   const shouldShowComponent = useMemo(() => {
     // if (field) return false;
     if (step > 3) return false;
@@ -66,7 +63,7 @@ const Page = () => {
         )}
 
         {!shouldShowComponent && <Chat />}
-        <div className="flex 2xl:px-24 flex-col">
+        <div className="flex p-1 2xl:px-24 flex-col">
           {!shouldShowComponent && <Switch />}
           {!shouldShowComponent && <Input />}
 
