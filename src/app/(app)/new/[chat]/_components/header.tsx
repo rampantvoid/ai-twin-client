@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 
 export const Header = () => {
   const param = useParams<{ chat: string }>();
+
   return (
     <div className="space-y-1 ">
       <h1 className="uppercase text-[18px] font-bold">AI Twin</h1>

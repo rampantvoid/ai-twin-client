@@ -15,7 +15,7 @@ import { useField } from "@/app/stores/field";
 import { useParams } from "next/navigation";
 
 const Page = () => {
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(4);
   const param = useParams<{ type: string }>();
   console.log(param);
 

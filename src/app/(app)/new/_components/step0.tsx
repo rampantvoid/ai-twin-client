@@ -33,9 +33,10 @@ export const Step0 = (props: StepProp) => {
               if (["health", "financial", "personalized"].includes(field)) {
                 setField(field);
                 router.push(`new/${field}`);
+              } else {
+                setField(null);
+                router.push(`new/${field}`);
               }
-              setField(field);
-              router.push(`new/${field}`);
               // props.handleNext();
             }}
             className="cursor-pointer bg-white rounded-[24px] flex items-center justify-start px-2 py-4 md:gap-2 lg:gap-8  2xl:min-w-[300px] md:min-w-[200px] shadow-sm"
