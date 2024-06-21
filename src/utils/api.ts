@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getResponse = async (field: string | null, text: string) => {
   const res = await axios.post<{ response: string }>(
-    `http://3.111.245.115:5000/${field || "text"}`,
+    `https://api.myaitwin.in/${field || "text"}`,
     field === "health"
       ? {
           text,
@@ -19,7 +19,7 @@ export const getSummary = async (file: File, endpoint: string) => {
   formData.set("file", file);
 
   const res = await axios.post<{ response: string }>(
-    `http://3.111.245.115:5000/${endpoint}`,
+    `https://api.myaitwin.in/${endpoint}`,
     formData,
     {
       headers: {
